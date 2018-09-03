@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4.5" type="template" client="site">
+        <name>hecho</name>
+        <creationDate>13/11/2015</creationDate>
+        <author>Alexandr Bobrenko</author>
+        <authorEmail>oknerbob@gmail.com</authorEmail>
+        <authorUrl>mensacreative.com</authorUrl>
+        <copyright>Author 2015</copyright>
+        <license>GNU/GPL</license>
+        <version>3.4.5</version>
+        <description>Dan Hecho</description>
+        <files>
+                <folder>css</folder>
+                <folder>html</folder>
+                <folder>images</folder>
+                <folder>js</folder>
+                <filename>index.php</filename>
+                <filename>index.html</filename>
+                <filename>templateDetails.xml</filename>
+        </files>
+        <positions>
+          	<position>top-logo</position>
+            <position>top-nav</position>
+            <position>social</position>
+            <position>main_page_header</position>
+            <position>slider</position>
+            <position>content</position>
+            <position>footer</position>
+            <position>footer-about</position>
+            <position>footer-products</position>
+            <position>footer-gallery</position>
+            <position>footer-contacts</position>
+            <position>purchase-window</position>
+            <position>purchase-button</position>
+            <position>email-form</position>
+        </positions>
+</extension>
