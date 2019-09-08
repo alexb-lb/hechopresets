@@ -230,56 +230,97 @@ main {
   text-align: center;
 }
 
-/*SLIDER*/
 /*preset blocks*/
-.preset-block .preset-img {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 80px 0 15px;
-  width: 160px;
-  height: 160px;
+.presets-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.preset-block .preset-img img {
-  width: 160px;
+.preset-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 10px;
+  width: 300px;
+  font-family: 'Roboto',Arial,sans-serif;
+  flex: auto;
+}
+
+.preset-block .icon {
+  position: relative;
+  margin-top: 60px; 
+}
+
+.preset-block .icon img {
+  max-width: 200px;
+}
+
+.preset-block .icon .additional {
+  position: absolute;
+  right: -50px;
+  top: -45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;  
+  border-radius: 50px;
+  background-color: #ff4a4a;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 0 10px;
+  text-transform: uppercase;
 }
 
 .preset-block .preset-description {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 650px;
-  margin-top: 5px;
-}
-
-.preset-block .preset-description .preset-under-header {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 18px;
-}
-
-.preset-block .preset-description .preset-link {
-  margin: 5px 0;
-}
-
-.preset-block .preset-description .preset-link a {
-  display: block;
-  color: #a61a1a;
-  font: 18px "Roboto";
-  font-weight: 400;
-}
-
-.price {
   position: relative;
-  font: 28px "Roboto";
-  font-weight: 400;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 60px;
+  padding: 36px 40px;
+  background-color: #f0f0f0;
+  flex-grow: 1;
 }
 
-.dollar {
-  font: 24px "Roboto";
-  font-weight: 400;
+.preset-block .preset-description .header {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: 'Roboto',Arial,sans-serif;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.preset-block .preset-description .description-text {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #000;
+}
+
+.preset-block .preset-description .buy-now {
+  position: absolute;
+  bottom: 30px;
+
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Roboto',Arial,sans-serif;
+  color: #000;
+  text-decoration: none;
+  padding: 15px 30px;
+  text-transform: uppercase;
+}
+
+.preset-block .preset-description .buy-now:hover {
+  transition: linear 0.1s;
+  color: #ff4a4a;
+  border: 1px solid #ff4a4a;
 }
 
 /*footer*/
@@ -573,6 +614,11 @@ main {
   border-bottom: 2px solid #dcdcdc;
 }
 
+.page-header h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .item-page img {
   max-width: 1000px;
 }
@@ -615,12 +661,13 @@ background: url("../images/149.png");
 **/
 /***** end new year*****/
 
-
 /********* DISCOUNT *********/
+
+
 .sale {
   display: none;
 }
-/**
+
 .sale {
   border: 2px solid #f70000;
   margin: 50px 20px 20px 20px;
@@ -640,7 +687,21 @@ background: url("../images/149.png");
   font-size: 16px;
 }
 
-.price.light::before, .price.silver::before, .price.pentax::before, .price.gold::before {
+.price {
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 40px 0 80px 0;
+}
+
+.item-page .price {
+  margin: 20px 0 20px 0;
+  color: #ff4a4a;
+  font-size: 18px;
+}
+
+/** .price.light::before, .price.pentax::before, .price.silver::before, .price.gold::before, .price.start::before, .price.2019::before { **/
+/* .price.light::before, .price.pentax::before, .price.silver::before, .price.gold::before {
   content: '';
   position: absolute;
   width: 63px;
@@ -649,37 +710,50 @@ background: url("../images/149.png");
   z-index: 1;
   top: 7px;
   left: -2px;
-}
+} */
 
-.price.light::after, .price.silver::after, .price.pentax::after, .price.gold::after {
+/** .price.light::after, .price.pentax::after, .price.silver::after, .price.gold::after, .price.start::after, .price.2019::after  { **/
+.price.light::after, .price.pentax::after, .price.silver::after, .price.gold::after {
   content: '';
   position: absolute;
-  width: 65px;
-  height: 65px;
+  color: #bdbdbd;
   top: -12px;
-  left: 70px;
+  left: 55px;
+  text-decoration: line-through;
 }
 
-.price.light::after {
+/**
+.price.start::after {
   content: '29€';
+  margin-top: 12px;
+}
+.price.2019::after {
+  content: '29€';
+  margin-top: 12px;
+}
+**/
+
+.price.light::after {
+  content: '49€';
   margin-top: 12px;
 }
 
 .price.silver::after {
-  content: '59€';
+  content: '99€';
   margin-top: 12px;
 }
 
 .price.pentax::after {
-  content: '71€';
-  margin-top: 12px;
-}
-
-.price.gold::after {
   content: '119€';
   margin-top: 12px;
 }
 
+.price.gold::after {
+  content: '199€';
+  margin-top: 12px;
+}
+
+/**
 .spec-offer{
   font-weight: bold;
   font-size: 18px;
